@@ -1,0 +1,103 @@
+#three-point-icon {
+  background-color: rgba(0, 0, 0, 0.224);
+  justify-content: center;
+  display: flex;
+
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+}
+/* #three-point-icon span {
+  font-size: x-large;
+} */
+/* link styling */
+.part1 a {
+  text-decoration: none;
+  margin-right: 10px;
+  color: rgba(14, 14, 13, 0.267);
+}
+
+#profiel {
+  border-radius: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 37px;
+  width: 37px;
+}
+.part2-1 {
+  gap: 10px;
+}
+/* icon setting and three point styling */
+.part2-2 i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.part2-2 {
+  justify-content: flex-end;
+}
+#con {
+  width: 40px;
+  font-size: x-large;
+}
+/* ___________ */
+.sprint-part-2 > span {
+  width: 30px;
+  height: 30px;
+}
+.border-2 {
+  display: flex;
+  width: 140px;
+  height: 40px;
+  background-color: rgb(0 0 0 / 5%);
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+.sprint {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.027);
+  flex-wrap: nowrap;
+}
+.baclog-part {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.027);
+  flex-wrap: nowrap;
+
+  justify-content: space-between;
+}
+.baclog-part2-2 > span {
+  width: 30px;
+  height: 30px;
+}
+.baclog-part {
+  margin-top: 60px;
+  flex-wrap: nowrap;
+}
+.baclog-part1 {
+  width: 50%;
+}
+.item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: solid rgba(0, 0, 0, 0.155) 2px;
+}
+.creat_issues:hover {
+  background-color: rgba(0, 0, 0, 0.073);
+}
+.para {
+  display: none;
+}
+#inputValu {
+  width: 100%;
+  border-radius: 5px;
+}
+#plus {
+  width: 100%;
+  border-radius: 5px;
+}
