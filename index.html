@@ -1,202 +1,306 @@
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="js/bootstrap.js" />
-    <link rel="stylesheet" href="css/bootstrap.css" />
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Dropdown
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><hr class="dropdown-divider" /></li>
-                <li>
-                  <a class="dropdown-item" href="#">Something else here</a>
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link disabled"
-                href="#"
-                tabindex="-1"
-                aria-disabled="true"
-                >Disabled</a
-              >
-            </li>
-          </ul>
-          <form class="d-flex">
-            <input
-              class="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button class="btn btn-outline-success" type="submit">
-              Search
-            </button>
-          </form>
-        </div>
-      </div>
-    </nav>
-    <div class="container">
-      <div class="part1 d-flex">
-        <a href="#">Projects</a>
-        <a href="#"> Scrum-Board</a>
-      </div>
-      <div class="backlog d-flex justify-content-between align-items-center">
-        <h3>backlog</h3>
-        <div id="three-point-icon">
-          <i class="fa-solid fa-ellipsis"></i>
-        </div>
-      </div>
-      <div class="part2 row mt-3">
-        <div class="part2-1 d-flex col-8 align-items-center">
-          <div class="search pt-2">
-            <input type="text" name="" id="inp" placeholder="" />
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </div>
-          <div class="profiel ps-3 pt-2 d-flex align-items-center w-25">
-            <span class="bg-info rounded-circle text-light" id="profiel"
-              >Y</span
-            >
-            <span class="bg-info rounded-circle text-light" id="profiel"
-              >A</span
-            >
-            <span class="bg-info rounded-circle text-light" id="profiel"
-              >AB</span
-            >
-            <span class="bg-info rounded-circle text-light" id="profiel"
-              >H</span
-            >
-            <i class="fa-solid fa-user-plus ms-4"></i>
-          </div>
-        </div>
-        <div class="part2-2 col-4 d-flex">
-          <i id="con" class="fa-solid fa-sliders"></i>
-          <i id="con" class="fa-solid fa-ellipsis"></i>
-        </div>
-      </div>
-      <div class="sprint row d-flex mt-5">
-        <div class="sprint-part-1 col-7 d-flex">
-          <h5>
-            <span onclick="shin()" style="cursor: pointer">></span>SB sprint
-          </h5>
-          <p class="ms-3">26 Oct-2 Nov (11 issues)</p>
-        </div>
-        <div
-          class="sprint-part-2 d-flex justify-content-end gap-3 align-items-center col-5"
-        >
-          <span
-            class="d-flex justify-content-center align-items-center rounded-circle text-light bg-secondary"
-            >0</span
-          >
-          <span
-            class="d-flex justify-content-center align-items-center rounded-circle text-light bg-primary"
-            >0</span
-          >
-          <span
-            class="d-flex justify-content-center align-items-center rounded-circle text-light bg-success"
-            >0</span
-          >
-          <p class="border-2">Sprint complet</p>
-          <i id="con" class="fa-solid fa-ellipsis"></i>
-        </div>
-      </div>
-      <div class="your_sprint" id="your_sprint">
-        <div class="first_sprint border border border-1 p-3">
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-        </div>
-        <div class="second_sprint border border border-1 p-3">
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-        </div>
-        <div class="second_sprint border border border-1 p-3">
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-        </div>
-      </div>
-      <div class="baclog-part d-flex">
-        <div class="baclog-part1">
-          <div class="sprint-part-1 col-7 d-flex">
-            <h5>
-              <span onclick="aficher()" style="cursor: pointer">></span>backlog
-            </h5>
-            <!-- <button onclick="aficher()">baclog</button> -->
-            <p class="ms-3">(0 issues)</p>
-          </div>
-        </div>
 
-        <div
-          class="baclog-part2-2 d-flex justify-content-end gap-3 align-items-center col-5"
-        >
-          <span
-            class="d-flex justify-content-center align-items-center rounded-circle text-light bg-secondary"
-            >0</span
-          >
-          <span
-            class="d-flex justify-content-center align-items-center rounded-circle text-light bg-primary"
-            >0</span
-          >
-          <span
-            class="d-flex justify-content-center align-items-center rounded-circle text-light bg-success"
-            >0</span
-          >
-          <p class="border-2">Sprint complet</p>
-          <i id="con" class="fa-solid fa-ellipsis"></i>
-        </div>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <header >
+        <nav class="navbar navbar-expand-lg navbar-light bg-white">
+            <a class="navbar-brand" href="#">
+                <img src="../images/logo.png" alt="Logo" width="200">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse d-flex justify-content-center" id="navbarNav"
+                style="margin-left: 260px;">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown mx-3 ">
+                        <a class="nav-link dropdown-toggle" href="#" id="teamsDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Teams
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="teamsDropdown">
+                            <a class="dropdown-item" href="#">Team 1</a>
+                            <a class="dropdown-item" href="#">Team 2</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown mx-3">
+                        <a class="nav-link dropdown-toggle" href="#" id="projectsDropdown" role of "button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                            style="color: rgb(0, 132, 255); border-bottom: 1px solid rgb(0, 132, 255) ;">
+                            Projects
+                        </a>
+                        <div class="dropdown-menu " aria-labelledby="projectsDropdown">
+                            <a class="dropdown-item" href="#">Project 1</a>
+                            <a class="dropdown-item" href="#">Project 2</a>
+                        </div>
+                    </li>
+                    <li class="nav-item mx-5 mt-2">
+                        <button class="btn  py-1 rounded "style="background: #2887f3; color: aliceblue;">Create</button>
+                    </li>
+                </ul>
+            </div>
+
+            <ul class="navbar-nav ml-auto">
+
+                <li class="nav-item ">
+                    <a class="nav-link " href="#"><img src="../images/icon-park-solid_setting.png"
+                            style="margin-top: 16px;" width="25" alt=""></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><img src="../images/Rectangle.png" width="50" alt=""></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="main">
+        <nav class="sidebar close ">
+            <aside >
+                <div class="image-text" style="  padding-bottom: 21px;">
+                    <span class="image">
+                        <img src="../images/image 3.png" alt="">
+                    </span>
+                    <div class="text logo-text">
+                        <span class="name">Nameprojects</span>
+                        <span class="profession">Software project</span>
+                    </div>
+                </div>
+
+                <i class='bx bx-chevron-right toggle'></i>
+            </aside>
+
+            <div class="menu-bar">
+                <div class="menu">
+                    <ul class="menu-links">
+                        <li class="nav-link">
+                            <a href="#">
+                                <i class='bx bx-time icon'></i>
+                                <span class="text nav-text">Timeline</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-link">
+                            <a href="#">
+                                <i class='bx bx-list-plus icon'></i>
+                                <span class="text nav-text">Backlog</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-link">
+                            <a href="#">
+                                <i class='bx bxs-dashboard icon'></i>
+                                <span class="text nav-text">Board</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-link">
+                            <a href="#">
+                                <i class='bx bx-cog icon'></i>
+                                <span class="text nav-text">Projects Settings</span>
+                            </a>
+                        </li>
+
+
+
+                    </ul>
+                </div>
+
+        </nav>
+        <section class="Board-centered">
+            <section class="Board-centered-top">
+                <div class="Board-centered-top-leftContent">
+                    <div>
+                        <p class="shiftedText">Projects / scrum-board</p>
+                        <p class="BoldText">SB Sprint 1</p>
+                        <p class="shiftedText">Complete the web development and user interface</p>
+                    </div>
+                    <div class="searchBarAndProfiles">
+                        <div class="search-bar">
+                            <div class="search-input-container">
+                                <i class="fas fa-search search-icon"></i>
+                                <input class="search-input" maxlength="15" type="text" placeholder="Search..." />
+                            </div>
+                        </div>
+                        <div class="profiles" style="position: relative;">
+                            <div class="ProfileSercle c1" style="position: absolute;left: 10px; background: purple;">
+                                <p class="shiftedText">Y</p>
+                            </div>
+                            <div class="ProfileSercle c2" style="position: absolute;left: 40px; background: blue">
+                                <p class="shiftedText">H</p>
+                            </div>
+                            <div class="ProfileSercle c3" style="position: absolute;left: 70px; background: green">
+                                <p class="shiftedText">AB</p>
+                            </div>
+                            <div class="ProfileSercle c4" style="position: absolute;left: 100px; background: black">
+                                <p class="shiftedText">A</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="settingContainer">
+                    <div class="Board-settings">
+                        <i class="fa-solid fa-sliders icon"></i>
+                        <p>View settings</p>
+                    </div>
+                </div>
+
+            </section>
+
+<!-- ________________________________________________________________________________________________ -->
+<div class="container-fluid">
+    
+   
+    <div style="background-color: rgba(0, 0, 0, 0.064);  background-color: #00000003;
+    border-radius: 10px;">
+    <div class="sprint row d-flex mt-5">
+      <div class="sprint-part-1 col-7 d-flex">
+        <h5>
+          <span onclick="shin()" style="cursor: pointer">></span>SB sprint
+        </h5>
+        <p class="ms-3">26 Oct-2 Nov (11 issues)</p>
       </div>
-      <div class="backlog-icreat border border-1 box" id="bx_test"></div>
-      <div class="creat_issues">
-        <p onclick="toggleElement()">+Creat issues</p>
-        <div id="myElement">
-          <input id="inputValu" type="text" />
-          <button id="plus">add to</button>
-        </div>
+      <div
+        class="sprint-part-2 d-flex justify-content-end gap-3 align-items-center col-5"
+      >
+        <span
+          class="d-flex justify-content-center align-items-center rounded-circle text-light bg-secondary"
+          >0</span
+        >
+        <span
+          class="d-flex justify-content-center align-items-center rounded-circle text-light bg-primary"
+          >0</span
+        >
+        <span
+          class="d-flex justify-content-center align-items-center rounded-circle text-light bg-success"
+          >0</span
+        >
+        <p  class="border-2">Sprint complet</p>
+        <i id="con" class="fa-solid fa-ellipsis"></i>
       </div>
     </div>
+    <div   class="your_sprint" id="your_sprint">
+      <!-- <div  id="mov" style="background-color: white ;
+      margin: 5px;border-radius: 5px;" class="first_sprint border border border-1 p-3">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+      </div>
 
+      <div  style="background-color: white ;
+      margin: 5px;border-radius: 5px;" class="second_sprint border border border-1 p-3">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+      </div>
+
+      <div style="background-color: white ;
+      margin: 5px;border-radius: 5px;" class="second_sprint border border border-1 p-3">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+      </div> -->
+      <div class="add_new_sprint border p-3">
+        <p><button>+</button>Creat issues</p>
+      </div>
+    </div>
+   
+  </div>
+    <div class="baclog-part d-flex">
+      <div class="baclog-part1">
+        <div class="sprint-part-1 col-7 d-flex">
+          <h5>
+            <span onclick="aficher()" style="cursor: pointer">></span>backlog
+          </h5>
+          <!-- <button onclick="aficher()">baclog</button> -->
+          <p class="ms-3">(0 issues)</p>
+        </div>
+      </div>
+
+      <div
+        class="baclog-part2-2 d-flex justify-content-end gap-3 align-items-center col-5"
+      >
+        <span
+          class="d-flex justify-content-center align-items-center rounded-circle text-light bg-secondary"
+          >0</span
+        >
+        <span
+          class="d-flex justify-content-center align-items-center rounded-circle text-light bg-primary"
+          >0</span
+        >
+        <span
+          class="d-flex justify-content-center align-items-center rounded-circle text-light bg-success"
+          >0</span
+        >
+        <p class="border-2">Sprint complet</p>
+        <i id="con" class="fa-solid fa-ellipsis"></i>
+      </div>
+    </div>
+    <div class="backlog-icreat border border-1 box" id="bx_test"></div>
+    <div class="creat_issues">
+      <p onclick="toggleElement()" style="cursor: pointer">+Creat issues</p>
+      <div id="myElement">
+        <input id="inputValu" type="text" />
+        <button id="plus">add to</button>
+      </div>
+    </div>
+  </div>
+                
+            </section>
+        </section>
+    </div>
+
+
+    
+   
     <script src="style.js"></script>
-  </body>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Code injected by live-server -->
+    <script>
+        // <![CDATA[  <-- For SVG support
+        if ('WebSocket' in window) {
+            (function () {
+                function refreshCSS() {
+                    var sheets = [].slice.call(document.getElementsByTagName("link"));
+                    var head = document.getElementsByTagName("head")[0];
+                    for (var i = 0; i < sheets.length; ++i) {
+                        var elem = sheets[i];
+                        var parent = elem.parentElement || head;
+                        parent.removeChild(elem);
+                        var rel = elem.rel;
+                        if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+                            var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+                            elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+                        }
+                        parent.appendChild(elem);
+                    }
+                }
+                var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+                var address = protocol + window.location.host + window.location.pathname + '/ws';
+                var socket = new WebSocket(address);
+                socket.onmessage = function (msg) {
+                    if (msg.data == 'reload') window.location.reload();
+                    else if (msg.data == 'refreshcss') refreshCSS();
+                };
+                if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+                    console.log('Live reload enabled.');
+                    sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+                }
+            })();
+        }
+        else {
+            console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+        }
+        // ]]>
+    </script>
+</body>
+
 </html>
