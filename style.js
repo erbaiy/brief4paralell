@@ -7,10 +7,11 @@ toggle.addEventListener("click", () => {
 // -----------------------------------------------------------------
 // let para = document.getElementsByClassName("para");
 let plus = document.getElementById("plus");
-let inp = document.getElementById("inputValu");
+let inp = document.getElementById("inputValue");
 let boxs = document.querySelectorAll(".your_sprint");
 let bx_test = document.getElementById("bx_test");
 let drag = null;
+let empty = document.getElementById("paragra");
 plus.onclick = function () {
   if (inp.value != "") {
     bx_test.innerHTML += `<p class="item" draggable="true">${inp.value}</p>`;
@@ -44,6 +45,7 @@ function dragItem() {
         this.append(drag);
         this.style.background = "white ";
         this.style.color = "rgba(0, 0, 0, 0.721)";
+        empty.style.display = "none";
       });
     });
   });
@@ -75,15 +77,3 @@ function shin() {
     sin.style.display = "none";
   }
 }
-
-// function drop(event) {
-//   event.preventDefault();
-// }
-// function allowDrop(event) {
-//   event.dataTransfer.setData("text/html", event.target.id);
-// }
-// function drag(event) {
-//   console.log("drag start");
-//   var data = event.dataTransfer.getData("text/html");
-//   event.target.appendChild(document.getElementById("your_sprint"));
-// }
