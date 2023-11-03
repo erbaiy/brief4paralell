@@ -14,7 +14,27 @@ let drag = null;
 let empty = document.getElementById("paragra");
 plus.onclick = function () {
   if (inp.value != "") {
-    bx_test.innerHTML += `<p class="item" draggable="true">${inp.value}</p>`;
+    bx_test.innerHTML += `
+    
+    <p class="item" draggable="true" >
+    <span>  
+    <input type="checkbox">
+    <i class='bx bx-bookmarks' style='color:green' ></i>
+    ${inp.value}  
+    <i id="pen" class="fa-solid fa-pen"></i>
+    </span>
+    <span class="btn-group">
+  <button   class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Small button
+  </button>
+  <ul class="dropdown-menu">
+    
+  </ul>
+</span>
+
+
+    </p>
+   `;
     inp.value = "";
   }
   dragItem();
